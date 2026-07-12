@@ -14,7 +14,7 @@ function Home() {
       </Helmet>
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <p className={styles.badge}>⚡ Nueva colección 2024</p>
+          <p className={styles.badge}>⚡ Nueva colección 2026</p>
           <h1 className={styles.heroTitle}>
             Tecnología que
             <span className={styles.highlight}> potencia</span>

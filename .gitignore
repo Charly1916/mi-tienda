@@ -26,4 +26,4 @@ dist-ssr
 # Archivos temporales / basura de Windows
 vite.config.js.timestamp-*
 synctest*.txt
-Nuevo Documento de texto.txt
+"Nuevo Documento de texto.txt"

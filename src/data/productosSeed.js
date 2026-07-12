@@ -1,4 +1,4 @@
-// Catálogo base utilizado para poblar la colección "Productos" de Firestore
+// Catálogo base utilizado para poblar la colección "productos" de Firestore
 // la primera vez que se usa el Panel de Administración (ver src/pages/Admin.jsx).
 const productosSeed = [
   {
