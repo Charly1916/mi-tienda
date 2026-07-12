@@ -4,6 +4,22 @@ Proyecto final del curso de React JS: una tienda online con catálogo de product
 carrito de compras, autenticación de usuarios y panel de administración con CRUD,
 todo conectado a Firebase.
 
+🌐 **Sitio publicado:** https://mi-tienda-cursoreact.netlify.app
+📦 **Repositorio de GitHub:** https://github.com/Charly1916/mi-tienda
+
+## Instalación y ejecución local
+
+```bash
+git clone https://github.com/Charly1916/mi-tienda.git
+cd mi-tienda
+npm install
+npm run dev
+```
+
+Abrí la URL que muestra la terminal (por defecto `http://localhost:5173`). El
+proyecto ya viene conectado a un proyecto real de Firebase (Firestore +
+Authentication), así que funciona sin configuración adicional.
+
 ## Funcionalidades
 
 - **Catálogo de productos** cargado desde Firebase Firestore, con búsqueda en tiempo
