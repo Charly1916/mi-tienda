@@ -16,9 +16,9 @@ npm install
 npm run dev
 ```
 
-Abrí la URL que muestra la terminal (por defecto `http://localhost:5173`). El
+Abrir la URL que muestra la terminal (por defecto `http://localhost:5173`). El
 proyecto ya viene conectado a un proyecto real de Firebase (Firestore +
-Authentication), así que funciona sin configuración adicional.
+Authentication), por lo que funciona sin configuración adicional.
 
 ## Funcionalidades
 
