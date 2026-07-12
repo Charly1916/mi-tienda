@@ -4,13 +4,13 @@ import { getAuth } from "firebase/auth";
 
 // Configuración del proyecto de Firebase (Firestore + Authentication).
 const firebaseConfig = {
-  apiKey: "AISyCelxxNBGFzW9Rb4yCdLjBMs2MDMVaXyalYU",
-  authDomain: "react-c9743.firebaseapp.com",
-  projectId: "react-c9743",
-  storageBucket: "react-c9743.firebasestorage.app",
-  messagingSenderId: "933655766258",
-  appId: "1:933655766258:web:e18886a2cfeb7de0913ca7",
-  measurementId: "G-9PRRX78S4R",
+  apiKey: "AIzaSyAOA3mdgwq8YHTcr0Cl9eBEkfylOcIbHTM",
+  authDomain: "mi-tienda-cursoreact.firebaseapp.com",
+  projectId: "mi-tienda-cursoreact",
+  storageBucket: "mi-tienda-cursoreact.firebasestorage.app",
+  messagingSenderId: "744723849155",
+  appId: "1:744723849155:web:ea4181d7323566c972e776",
+  measurementId: "G-FH31PP853N",
 };
 
 const app = initializeApp(firebaseConfig);

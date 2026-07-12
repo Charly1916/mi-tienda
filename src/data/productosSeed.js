@@ -1,4 +1,4 @@
-// Catálogo base utilizado para poblar la colección "productos" de Firestore
+// Catálogo base utilizado para poblar la colección "Productos" de Firestore
 // la primera vez que se usa el Panel de Administración (ver src/pages/Admin.jsx).
 const productosSeed = [
   {
@@ -87,6 +87,50 @@ const productosSeed = [
     imagen:
       "https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=400&h=300&fit=crop",
     stock: 18,
+    rating: 4.6,
+  },
+  {
+    nombre: "Logitech MX Master 3S",
+    precio: 99.99,
+    categoria: "Accesorios",
+    descripcion:
+      "Mouse inalámbrico de alta precisión con scroll silencioso, conexión multi-dispositivo y batería de larga duración.",
+    imagen:
+      "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=400&h=300&fit=crop",
+    stock: 22,
+    rating: 4.7,
+  },
+  {
+    nombre: 'Samsung Odyssey G7 27"',
+    precio: 549.99,
+    categoria: "Monitores",
+    descripcion:
+      "Monitor gamer curvo QHD de 240Hz, 1ms de respuesta y panel QLED con colores vibrantes.",
+    imagen:
+      "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=400&h=300&fit=crop",
+    stock: 10,
+    rating: 4.5,
+  },
+  {
+    nombre: "Nintendo Switch OLED",
+    precio: 349.99,
+    categoria: "Gaming",
+    descripcion:
+      "Consola híbrida con pantalla OLED de 7 pulgadas, mayor almacenamiento y base con puerto LAN integrado.",
+    imagen:
+      "https://images.unsplash.com/photo-1578303512597-81e6cc155b3e?w=400&h=300&fit=crop",
+    stock: 14,
+    rating: 4.8,
+  },
+  {
+    nombre: "GoPro HERO12 Black",
+    precio: 399.99,
+    categoria: "Cámaras",
+    descripcion:
+      "Cámara de acción con estabilización HyperSmooth 6.0, video 5.3K y resistencia al agua sin carcasa.",
+    imagen:
+      "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=400&h=300&fit=crop",
+    stock: 9,
     rating: 4.6,
   },
 ];

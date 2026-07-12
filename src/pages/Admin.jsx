@@ -15,7 +15,7 @@ import FormularioProducto from "../components/FormularioProducto/FormularioProdu
 import { BotonEditar, BotonEliminar } from "../components/BotonesAccion";
 import productosSeed from "../data/productosSeed";
 
-const COLECCION = "productos";
+const COLECCION = "Productos";
 
 function Admin() {
   const [productos, setProductos] = useState([]);
@@ -31,7 +31,11 @@ function Admin() {
     setError("");
     try {
       const snapshot = await getDocs(collection(db, COLECCION));
-      const datos = snapshot.docs.map((d) => ({ id: d.id, ...d.data() }));
+      // Ojo: el spread de d.data() va antes de "id" para que el id real del
+      // documento de Firestore siempre prevalezca sobre un posible campo
+      // "id" suelto dentro de los datos (por ejemplo, productos cargados a
+      // mano que traían un id numérico propio).
+      const datos = snapshot.docs.map((d) => ({ ...d.data(), id: d.id }));
       setProductos(datos);
     } catch (err) {
       console.error("Error al cargar productos:", err);

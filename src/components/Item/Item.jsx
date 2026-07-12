@@ -5,11 +5,21 @@ import { FaShoppingCart, FaStar } from 'react-icons/fa';
 import { useCarrito } from '../../context/CarritoContext';
 import styles from './Item.module.css';
 
+// Imagen de reemplazo (sin depender de ningún servicio externo) para cuando
+// la URL cargada en Firebase esté rota o inaccesible.
+const IMAGEN_PLACEHOLDER =
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect width='400' height='300' fill='%23e9ecef'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%236c757d' font-family='sans-serif' font-size='18'%3EImagen no disponible%3C/text%3E%3C/svg%3E";
+
 function Item({ producto }) {
   const { id, nombre, precio, categoria, imagen, stock, rating } = producto;
   const { agregarAlCarrito, getCantidadPorId } = useCarrito();
   const [cantidad, setCantidad] = useState(1);
   const cantidadEnCarrito = getCantidadPorId(id);
+
+  const handleImagenError = (e) => {
+    e.target.onerror = null;
+    e.target.src = IMAGEN_PLACEHOLDER;
+  };
 
   const handleAgregar = () => {
     if (stock > 0) {
@@ -19,7 +29,13 @@ function Item({ producto }) {
 
   return (
     <Card className={`h-100 ${styles.card}`}>
-      <Card.Img variant="top" src={imagen} alt={nombre} className={styles.image} />
+      <Card.Img
+        variant="top"
+        src={imagen || IMAGEN_PLACEHOLDER}
+        alt={nombre}
+        className={styles.image}
+        onError={handleImagenError}
+      />
       <Card.Body className="d-flex flex-column">
         <Badge bg="secondary" className="align-self-start mb-2">
           {categoria}

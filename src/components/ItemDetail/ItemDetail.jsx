@@ -8,6 +8,9 @@ import { db } from '../../firebase/config';
 import { useCarrito } from '../../context/CarritoContext';
 import styles from './ItemDetail.module.css';
 
+const IMAGEN_PLACEHOLDER =
+  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect width='400' height='300' fill='%23e9ecef'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%236c757d' font-family='sans-serif' font-size='18'%3EImagen no disponible%3C/text%3E%3C/svg%3E";
+
 function ItemDetail() {
   const { id } = useParams();
   const [producto, setProducto] = useState(null);
@@ -21,10 +24,10 @@ function ItemDetail() {
     setLoading(true);
     setError(null);
     setAgregado(false);
-    getDoc(doc(db, 'productos', id))
+    getDoc(doc(db, 'Productos', id))
       .then((snap) => {
         if (snap.exists()) {
-          setProducto({ id: snap.id, ...snap.data() });
+          setProducto({ ...snap.data(), id: snap.id });
         } else {
           setProducto(null);
         }
@@ -80,7 +83,15 @@ function ItemDetail() {
 
       <Row className="mt-3 g-4">
         <Col xs={12} md={6}>
-          <img src={imagen} alt={nombre} className={styles.image} />
+          <img
+            src={imagen || IMAGEN_PLACEHOLDER}
+            alt={nombre}
+            className={styles.image}
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = IMAGEN_PLACEHOLDER;
+            }}
+          />
         </Col>
         <Col xs={12} md={6}>
           <span className={styles.categoria}>{categoria}</span>

@@ -21,9 +21,9 @@ function ItemListContainer({ greeting }) {
   useEffect(() => {
     setLoading(true);
     setError(null);
-    getDocs(collection(db, 'productos'))
+    getDocs(collection(db, 'Productos'))
       .then((snapshot) => {
-        const datos = snapshot.docs.map((d) => ({ id: d.id, ...d.data() }));
+        const datos = snapshot.docs.map((d) => ({ ...d.data(), id: d.id }));
         setProductos(datos);
       })
       .catch((err) => {
