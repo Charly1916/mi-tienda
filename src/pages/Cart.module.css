@@ -1,0 +1,56 @@
+.cart {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.titulo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #f3f4f6;
+  margin-bottom: 2rem;
+}
+
+.empty {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 16px;
+  padding: 4rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.emptyIcon {
+  font-size: 4rem;
+}
+
+.empty h3 {
+  font-size: 1.2rem;
+  color: #f3f4f6;
+  margin: 0;
+}
+
+.empty p {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.7rem 1.8rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}

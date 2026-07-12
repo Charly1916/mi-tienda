@@ -1,0 +1,148 @@
+.section {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin-top: 1rem;
+}
+
+.titulo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f3f4f6;
+  margin: 0 0 0.4rem 0;
+}
+
+.subtitulo {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  margin: 0 0 2rem 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.field label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #d1d5db;
+}
+
+.field input,
+.field textarea {
+  background: #111;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 0.7rem 1rem;
+  color: #f3f4f6;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: #7c3aed;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #4b5563;
+}
+
+.inputError {
+  border-color: #f87171 !important;
+}
+
+.error {
+  font-size: 0.78rem;
+  color: #f87171;
+}
+
+.btnSubmit {
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  color: #fff;
+  border: none;
+  padding: 0.85rem 2rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+  align-self: flex-start;
+}
+
+.btnSubmit:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+.success {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 20px;
+  padding: 4rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.success span {
+  font-size: 3rem;
+}
+
+.success h3 {
+  font-size: 1.3rem;
+  color: #f3f4f6;
+  margin: 0;
+}
+
+.success p {
+  color: #9ca3af;
+  margin: 0;
+}
+
+.btnReset {
+  background: transparent;
+  border: 1px solid #7c3aed;
+  color: #a78bfa;
+  padding: 0.6rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.88rem;
+  margin-top: 0.5rem;
+  transition: background 0.2s;
+}
+
+.btnReset:hover {
+  background: rgba(124, 58, 237, 0.1);
+}
+
+@media (max-width: 600px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+  .section {
+    padding: 1.5rem;
+  }
+}
