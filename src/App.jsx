@@ -7,6 +7,7 @@ import Cart from './pages/Cart';
 import Login from './pages/Login';
 import Registro from './pages/Registro';
 import Admin from './pages/Admin';
+import AdminCupones from './pages/AdminCupones';
 import ItemDetail from './components/ItemDetail/ItemDetail';
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute';
 import { AuthProvider } from './context/AuthContext';
@@ -30,6 +31,14 @@ function App() {
                 element={
                   <ProtectedRoute>
                     <Admin />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/admin/cupones"
+                element={
+                  <ProtectedRoute>
+                    <AdminCupones />
                   </ProtectedRoute>
                 }
               />

@@ -9,7 +9,8 @@ import {
 } from "firebase/firestore";
 import { Alert, Badge, Button, Container, Modal, Spinner, Table } from "react-bootstrap";
 import { Helmet } from "react-helmet-async";
-import { FaDatabase, FaEdit, FaTrash } from "react-icons/fa";
+import { FaDatabase, FaEdit, FaTag, FaTrash } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import { db } from "../firebase/config";
 import FormularioProducto from "../components/FormularioProducto/FormularioProducto";
 import { BotonEditar, BotonEliminar } from "../components/BotonesAccion";
@@ -115,7 +116,12 @@ function Admin() {
         <meta name="description" content="Gestión de productos: alta, edición y eliminación." />
       </Helmet>
 
-      <h1 className="mb-4">Panel de administración</h1>
+      <div className="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+        <h1 className="mb-0">Panel de administración</h1>
+        <Link to="/admin/cupones" className="btn btn-outline-secondary btn-sm">
+          <FaTag className="me-1" /> Gestionar cupones
+        </Link>
+      </div>
 
       {error && <Alert variant="danger">{error}</Alert>}
 

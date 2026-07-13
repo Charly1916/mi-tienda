@@ -54,3 +54,39 @@
 .btn:hover {
   opacity: 0.9;
 }
+
+.cuponBox {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.resumen {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 1.2rem;
+  margin-top: 1rem;
+}
+
+.resumenLinea {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.35rem 0;
+  color: #d1d5db;
+}
+
+.resumenDescuento {
+  color: #34d399;
+}
+
+.resumenTotal {
+  border-top: 1px solid #2a2a2a;
+  margin-top: 0.5rem;
+  padding-top: 0.7rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #f3f4f6;
+}

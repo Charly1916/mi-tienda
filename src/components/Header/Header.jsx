@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { Badge } from 'react-bootstrap';
-import { FaShoppingCart, FaSignInAlt, FaSignOutAlt, FaUserCog, FaUserPlus } from 'react-icons/fa';
+import { FaShoppingCart, FaSignInAlt, FaSignOutAlt, FaTag, FaUserCog, FaUserPlus } from 'react-icons/fa';
 import { useCarrito } from '../../context/CarritoContext';
 import { useAuth } from '../../context/AuthContext';
 import styles from './Header.module.css';
@@ -40,6 +40,9 @@ function Header() {
             <>
               <Link to="/admin" className={styles.navLink}>
                 <FaUserCog /> Admin
+              </Link>
+              <Link to="/admin/cupones" className={styles.navLink}>
+                <FaTag /> Cupones
               </Link>
               <button onClick={handleLogout} className={styles.navButton}>
                 <FaSignOutAlt /> Salir

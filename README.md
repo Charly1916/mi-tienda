@@ -30,6 +30,8 @@ Authentication), por lo que funciona sin configuración adicional.
 - **Autenticación** (Firebase Authentication): registro, login y cierre de sesión.
 - **Panel de administración** (`/admin`, ruta protegida): alta, edición y eliminación
   de productos con validaciones, modal de confirmación de borrado y spinners de carga.
+- **Cupones de descuento** (`/admin/cupones`, ruta protegida): CRUD de cupones y
+  aplicación del código en el carrito, con cálculo automático del descuento.
 - **Diseño responsivo** con React-Bootstrap (grilla mobile-first) y estilos propios
   con CSS Modules y styled-components.
 - **SEO básico** con React Helmet (título y meta description por página).
@@ -59,5 +61,6 @@ src/
 | `/login`        | Inicio de sesión                              | Público    |
 | `/registro`     | Alta de usuario                               | Público    |
 | `/admin`        | Panel de gestión de productos (CRUD)          | Autenticado|
+| `/admin/cupones`| Panel de gestión de cupones de descuento (CRUD)| Autenticado|
 
 
